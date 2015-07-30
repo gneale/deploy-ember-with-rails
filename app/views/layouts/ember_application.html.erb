@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DeployEmberWithRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+
+  <%= javascript_include_tag 'ember-app/vendor' %>
+  <%= stylesheet_link_tag 'ember-app/vendor' %>
+
+  <%= javascript_include_tag 'ember-app/ember-app' %>
+  <%= stylesheet_link_tag 'ember-app/ember-app' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

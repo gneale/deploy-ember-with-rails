@@ -1,0 +1,2 @@
+module EmberAppHelper
+end
