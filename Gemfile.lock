@@ -157,7 +157,6 @@ DEPENDENCIES
   byebug
   capistrano-rails
   capistrano-rvm
-  execjs
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.3)
