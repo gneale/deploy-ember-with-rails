@@ -23,6 +23,8 @@ require 'capistrano/deploy'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
 
+load 'lib/capistrano/tasks/deploy.rb'
+
 set :rvm_ruby_string, "local"
 set :rvm_type, :user
 set :rvm_autolibs_flag, "read-only"
