@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'ember_app#show'
+   root 'welcome#show'
+   get 'ember-app' => 'ember_app#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
