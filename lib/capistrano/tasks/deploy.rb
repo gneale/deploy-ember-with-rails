@@ -16,7 +16,6 @@ namespace :deploy do
 
     ember_app_name = "ember-app"
     local_ember_assets_dir = "./public/assets/"
-    local_ember_images_dir = "./#{ember_app_name}/dist/assets/images/"
 
     task :precompile_local do
       # compile assets locally
@@ -29,10 +28,8 @@ namespace :deploy do
       on roles( fetch(:assets_roles, [:web]) ) do
         # this needs to be done outside run_locally in order for host to exist
         remote_assets_dir = "#{host.user}@#{host.hostname}:#{release_path}/public/assets/"
-        remote_images_dir = "#{host.user}@#{host.hostname}:#{release_path}/public/assets/#{ember_app_name}/images/"
 
         run_locally { execute "rsync -av --delete #{local_ember_assets_dir} #{remote_assets_dir}" }
-        run_locally { execute "rsync -av --delete #{local_ember_images_dir} #{remote_images_dir}" }
       end
 
       # clean up
